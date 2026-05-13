@@ -1,0 +1,236 @@
+{
+  "name": "raganork-md",
+  "description": "Raganork WhatsApp bot deployable on Heroku",
+  "repository": "https://github.com/souravkl11/raganork-md",
+  "logo": "https://i.ibb.co/QL4BQQ6/Untitled-1.png",
+  "keywords": [
+    "whatsapp",
+    "bot",
+    "baileys",
+    "raganork"
+  ],
+  "stack": "heroku-24",
+  "formation": {
+    "web": {
+      "quantity": 1,
+      "size": "basic"
+    }
+  },
+  "addons": [
+    "heroku-postgresql:essential-0"
+  ],
+  "env": {
+    "SESSION": {
+      "description": "Session string(s). Example: RGNK~abc123 or comma-separated multi sessions.",
+      "required": true
+    },
+    "DATABASE_URL": {
+      "description": "Provided by Heroku Postgres addon.",
+      "required": true
+    },
+    "BOT_NAME": {
+      "description": "Display name for the bot.",
+      "value": "Raganork"
+    },
+    "BOT_INFO": {
+      "description": "Semicolon separated bot info: name;owner;image-keyword.",
+      "value": "Raganork;Ryzen;default"
+    },
+    "HANDLERS": {
+      "description": "Command prefixes.",
+      "value": ".,"
+    },
+    "MODE": {
+      "description": "Bot mode: private/public/group/inbox.",
+      "value": "private"
+    },
+    "SUDO": {
+      "description": "Comma separated sudo numbers in international format.",
+      "value": ""
+    },
+    "LANGUAGE": {
+      "description": "Language key from plugins/utils/lang.",
+      "value": "english"
+    },
+    "ALIVE": {
+      "description": "Alive message.",
+      "value": "_I am alive! (use .setalive help for custom alive msg)_"
+    },
+    "AUTO_UPDATE": {
+      "description": "Enable auto update.",
+      "value": "true"
+    },
+    "DEBUG": {
+      "description": "Enable sequelize logging (true/false).",
+      "value": "false"
+    },
+    "LOG_LEVEL": {
+      "description": "Logger level for pino.",
+      "value": "silent"
+    },
+    "MAX_RECONNECT_ATTEMPTS": {
+      "description": "Max reconnect attempts.",
+      "value": "5"
+    },
+    "PM_ANTISPAM": {
+      "description": "Enable PM anti spam block.",
+      "value": "false"
+    },
+    "READ_MESSAGES": {
+      "description": "Auto read all messages.",
+      "value": "false"
+    },
+    "READ_COMMAND": {
+      "description": "Auto read command messages.",
+      "value": "true"
+    },
+    "AUTO_READ_STATUS": {
+      "description": "Auto read status updates.",
+      "value": "false"
+    },
+    "ADMIN_ACCESS": {
+      "description": "Allow admin sudo mode.",
+      "value": "false"
+    },
+    "MULTI_HANDLERS": {
+      "description": "With and without handler mode.",
+      "value": "false"
+    },
+    "REJECT_CALLS": {
+      "description": "Auto reject incoming calls.",
+      "value": "false"
+    },
+    "ALWAYS_ONLINE": {
+      "description": "Always online presence.",
+      "value": "false"
+    },
+    "PMB_VAR": {
+      "description": "Enable PM auto blocker.",
+      "value": "false"
+    },
+    "DIS_PM": {
+      "description": "Disable bot in personal chats.",
+      "value": "false"
+    },
+    "DISABLE_START_MESSAGE": {
+      "description": "Disable startup message.",
+      "value": "false"
+    },
+    "SUPPORT_GROUP": {
+      "description": "Support group URL.",
+      "value": "https://t.me/raganork_in"
+    },
+    "STICKER_DATA": {
+      "description": "Sticker pack metadata.",
+      "value": "Raganork"
+    },
+    "AUDIO_DATA": {
+      "description": "Audio metadata profile.",
+      "value": "default"
+    },
+    "TZ": {
+      "description": "Timezone for schedulers.",
+      "value": "UTC"
+    },
+    "ANTI_SPAM": {
+      "description": "Group IDs for anti-spam checks.",
+      "value": "919074309534-1632403322@g.us"
+    },
+    "ANTISPAM_COUNT": {
+      "description": "Spam threshold, format count/window.",
+      "value": "6/10"
+    },
+    "ANTIWORD_WARN": {
+      "description": "Warning text for antiword.",
+      "value": ""
+    },
+    "ANTILINK_WARN": {
+      "description": "Warning text for antilink.",
+      "value": ""
+    },
+    "ANTI_BOT": {
+      "description": "Enable anti-bot behavior.",
+      "value": ""
+    },
+    "ANTI_DELETE": {
+      "description": "Enable anti delete feature.",
+      "value": "false"
+    },
+    "ALLOWED": {
+      "description": "Allowed country codes.",
+      "value": "91,94,2"
+    },
+    "NOT_ALLOWED": {
+      "description": "Blocked country codes.",
+      "value": "852"
+    },
+    "BLOCK_CHAT": {
+      "description": "Comma separated chats to block.",
+      "value": ""
+    },
+    "DISABLED_COMMANDS": {
+      "description": "Comma separated commands to disable.",
+      "value": ""
+    },
+    "NOLOG": {
+      "description": "Disable logs for specific flows.",
+      "value": "false"
+    },
+    "RG": {
+      "description": "Default group IDs list.",
+      "value": "919074309534-1632403322@g.us,120363116963909366@g.us"
+    },
+    "RBG_KEY": {
+      "description": "remove.bg API key (optional).",
+      "value": ""
+    },
+    "TAKE_KEY": {
+      "description": "API key for take plugin features.",
+      "value": ""
+    },
+    "CHATBOT": {
+      "description": "Chatbot mode.",
+      "value": "off"
+    },
+    "MANGLISH_CHATBOT": {
+      "description": "Enable manglish chatbot.",
+      "value": "false"
+    },
+    "WARN": {
+      "description": "Max warning count before action.",
+      "value": "4"
+    },
+    "CALL_REJECT_MESSAGE": {
+      "description": "Message to send when rejecting calls.",
+      "value": ""
+    },
+    "ALLOWED_CALLS": {
+      "description": "Comma-separated JIDs allowed to call.",
+      "value": ""
+    },
+    "PMB": {
+      "description": "PM block reply message.",
+      "value": "_Personal messages not allowed, BLOCKED!_"
+    },
+    "AUTOMUTE_MSG": {
+      "description": "Automute message.",
+      "value": "_Group automuted!_\n_(edit AUTOMUTE_MSG)_"
+    },
+    "AUTOUNMUTE_MSG": {
+      "description": "Autounmute message.",
+      "value": "_Group auto unmuted!_\n_(edit AUTOUNMUTE_MSG)_"
+    },
+    "CMD_REACTION": {
+      "description": "Enable command reaction.",
+      "value": "false"
+    }
+  },
+  "buildpacks": [
+    {
+      "url": "heroku-community/apt"
+    },
+    {
+      "url": "heroku/nodejs"
+    }
+  ]
+}

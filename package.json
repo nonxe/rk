@@ -5,7 +5,8 @@
   "main": "index.js",
   "type": "commonjs",
   "scripts": {
-    "start": "pm2 start index.js --name raganork-md --attach"
+    "start": "node index.js",
+    "start:pm2": "pm2 start index.js --name raganork-md --attach"
   },
   "keywords": [
     "whatsapp",
@@ -40,6 +41,9 @@
     "simple-git": "^3.27.0",
     "sqlite3": "^5.1.7",
     "youtube-sr": "^4.3.11"
+  },
+  "engines": {
+    "node": ">=20 <25",
+    "yarn": ">=1.22.0"
   }
 }
-

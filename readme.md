@@ -155,3 +155,20 @@ GPL License - See LICENSE file for details.
 ---
 
 **Note:** Some files are obfuscated for security reasons and should not be modified.
+
+## Heroku Deployment (Stack 24)
+
+This repository now includes Heroku-ready files:
+
+- `Procfile` (`web: npm start`)
+- `app.json` with `heroku-24` stack, Postgres addon, env var templates
+- `Aptfile` for FFmpeg installation via `heroku-community/apt`
+
+### Quick deploy
+
+1. Create app with stack **heroku-24**.
+2. Attach **Heroku Postgres** addon (or use the one from `app.json`).
+3. Set `SESSION` and other optional vars from the `app.json` env section.
+4. Deploy the repo.
+
+> `DATABASE_URL` is automatically injected by Heroku Postgres.
